@@ -1,4 +1,4 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -38,9 +38,10 @@ public class ProductoImportado extends Producto{ //Princiio de Abierto/Cerrado..
         this.precioCompra = precioCompra;
     }
 
-    
-    @Override
+        @Override
     public double calcularPrecioVenta() {
         return precioCosto + (0.05 * precioCosto) + (27 * precioCompra);
     }
+
+    
 }
