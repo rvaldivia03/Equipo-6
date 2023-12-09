@@ -7,6 +7,7 @@
 package domain;
 
 
+import interfaces.ICadena;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,11 +15,11 @@ import java.util.List;
  *
  * @author Ramses
  */
-public class Cadena{
+public class Cadena implements ICadena{
     
     private List<Almacen> almacenes;
     
-
+    @Override
     public void agregarAlmacen(Almacen a) {
         almacenes.add(a);
     }

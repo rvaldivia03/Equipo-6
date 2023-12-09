@@ -80,11 +80,11 @@ public class Almacen implements IAlmacen{
 
     
     @Override
-    public List<Producto> obtenerProductosPorDebajoExistencia(int valor,Producto p) {
+    public List<Producto> obtenerProductosPorDebajoExistencia(int valor,String nombre) {
         
                 List<Producto> productosBajoExistencia = new ArrayList<>();
         for (Producto producto : productos) {
-            if (producto.getExistencia() < valor && producto == p) {
+            if (producto.getExistencia() < valor && producto.nombre.equals(nombre)) {
                 productosBajoExistencia.add(producto);
             }
         }
