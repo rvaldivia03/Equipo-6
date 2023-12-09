@@ -20,9 +20,15 @@ import utils.ComparadorPorVentas;
 public class Almacen implements IAlmacen{
     
     private List <Producto> productos;
+    private String nombre;
 
     public Almacen(List<Producto> productos) {
-        this.productos = new ArrayList<Producto>();//Inversion de dependencia
+        this.productos = new ArrayList<Producto>();
+    }
+
+    public Almacen(List<Producto> productos, String nombre) {
+        this.productos = productos;
+        this.nombre = nombre;
     }
     
     public List<Producto> getProductos() {
@@ -32,6 +38,15 @@ public class Almacen implements IAlmacen{
     public void setProductos(List<Producto> productos) {
         this.productos = productos;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
     
     
     @Override
