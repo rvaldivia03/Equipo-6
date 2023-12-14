@@ -96,6 +96,17 @@ public class CadenaTest {
         Assert.assertEquals(1, productosBajoExistencia.size());
         Assert.assertTrue(cadena.obtenerProductosPorDebajoExistencia(20, "zapatilla").contains(producto));
     }
-   
+     @Test
+    public void testObtenerProductosVendidosACubaPorPais() {
+        ProductoImportado pi = new ProductoImportado("Chile", 50, "007", "medias", 55, 77, 90);
+        List<Producto> productos = cadena.getProductos();
+        productos.add(pi);
+        List<ProductoImportado> productosImportados = cadena.obtenerProductosImportados();
+        List<ProductoImportado> vendidosACuba = cadena.obtenerProductosVendidosACubaPorPais("Chile");
+        Assert.assertTrue(vendidosACuba.contains(pi));
+        Assert.assertEquals(1, cadena.obtenerProductosVendidosACubaPorPais("Chile").size());
+        Assert.assertTrue(cadena.obtenerProductosVendidosACubaPorPais("Chile").contains(pi));
+    }
     
 }
+
