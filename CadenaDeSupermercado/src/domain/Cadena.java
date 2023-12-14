@@ -20,16 +20,16 @@ import utils.ComparadorPorVentas;
 public class Cadena implements ICadena{
     
       private List <Producto> productos;
-    private String nombre;
+      
+       public Cadena() {
+      productos = new ArrayList<Producto>();
+    }
 
     public Cadena(List<Producto> productos) {
         this.productos = new ArrayList<Producto>();
     }
 
-    public Cadena(List<Producto> productos, String nombre) {
-        this.productos = productos;
-        this.nombre = nombre;
-    }
+
     
     public List<Producto> getProductos() {
         return productos;
@@ -38,17 +38,7 @@ public class Cadena implements ICadena{
     public void setProductos(List<Producto> productos) {
         this.productos = productos;
     }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-    
-    
-    
+ 
     @Override
     public void agregarProducto(Producto p) {//Principio de la unica responsabilidad
         productos.add(p);
