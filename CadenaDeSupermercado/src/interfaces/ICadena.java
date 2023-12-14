@@ -6,7 +6,11 @@
 
 package interfaces;
 
-import domain.Almacen;
+
+import domain.Producto;
+import domain.ProductoImportado;
+import domain.ProductoNacional;
+import java.util.List;
 
 /**
  *
@@ -14,6 +18,20 @@ import domain.Almacen;
  */
 public interface ICadena {
     
-   void agregarAlmacen (Almacen a);
-   
+    void agregarProducto (Producto p);
+    void modificarProducto (String codigo, Producto productoModificado);
+    void eliminarProducto (Producto p);
+    Producto productoMasVendido();
+    Producto productoMenosVendido();
+    
+    List <ProductoNacional> obtenerProductosNacionales();
+    List <ProductoImportado> obtenerProductosImportados();
+    List <Producto> obtenerProductosPorDebajoExistencia(int valor,String nombre);
+    List <Producto> listaOrdenadaPorVentas();
+    List <ProductoImportado> obtenerProductosVendidosACubaPorPais(String pais);
+    List <ProductoNacional> productosPorEcimadeValor(int precioDado);
+    
 }
+
+   
+
