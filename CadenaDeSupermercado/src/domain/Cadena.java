@@ -30,7 +30,7 @@ public class Cadena implements ICadena{
     }
 
 
-    
+    @Override
     public List<Producto> getProductos() {
         return productos;
     }

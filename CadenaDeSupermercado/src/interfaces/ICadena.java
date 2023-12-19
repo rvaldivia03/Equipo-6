@@ -23,7 +23,7 @@ public interface ICadena {
     void eliminarProducto (Producto p);
     Producto productoMasVendido();
     Producto productoMenosVendido();
-    
+    List<Producto> getProductos();
     List <ProductoNacional> obtenerProductosNacionales();
     List <ProductoImportado> obtenerProductosImportados();
     List <Producto> obtenerProductosPorDebajoExistencia(int valor,String nombre);
